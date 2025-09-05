@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">LifeCycleV5</string>
+
+    <string-array name="countries">
+        <!-- Norden -->
+        <item>Sverige</item>
+        <item>Norge</item>
+        <item>Danmark</item>
+        <item>Finland</item>
+        <item>Island</item>
+
+        <!-- Europa -->
+        <item>Storbritannien</item>
+        <item>Irland</item>
+        <item>Frankrike</item>
+        <item>Tyskland</item>
+        <item>Spanien</item>
+        <item>Portugal</item>
+        <item>Italien</item>
+        <item>Nederländerna</item>
+        <item>Belgien</item>
+        <item>Schweiz</item>
+        <item>Österrike</item>
+        <item>Polen</item>
+        <item>Tjeckien</item>
+        <item>Slovakien</item>
+        <item>Ungern</item>
+        <item>Grekland</item>
+        <item>Rumänien</item>
+        <item>Bulgarien</item>
+        <item>Kroatien</item>
+        <item>Slovenien</item>
+        <item>Estland</item>
+        <item>Lettland</item>
+        <item>Litauen</item>
+        <item>Luxemburg</item>
+        <item>Malta</item>
+        <item>Cypern</item>
+        <item>Serbien</item>
+        <item>Bosnien och Hercegovina</item>
+        <item>Montenegro</item>
+        <item>Nordmakedonien</item>
+        <item>Albanien</item>
+        <item>Turkiet</item>
+        <item>Ukraina</item>
+
+        <!-- Amerika -->
+        <item>USA</item>
+        <item>Kanada</item>
+        <item>Mexiko</item>
+        <item>Brasilien</item>
+        <item>Argentina</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>Peru</item>
+
+        <!-- Asien -->
+        <item>Kina</item>
+        <item>Japan</item>
+        <item>Sydkorea</item>
+        <item>Indien</item>
+        <item>Pakistan</item>
+        <item>Bangladesh</item>
+        <item>Indonesien</item>
+        <item>Filippinerna</item>
+        <item>Malaysia</item>
+        <item>Thailand</item>
+        <item>Vietnam</item>
+        <item>Singapore</item>
+
+        <!-- Afrika -->
+        <item>Egypten</item>
+        <item>Sydafrika</item>
+        <item>Nigeria</item>
+        <item>Kenya</item>
+        <item>Etiopien</item>
+        <item>Marocko</item>
+        <item>Algeriet</item>
+        <item>Tunisien</item>
+
+        <!-- Mellanöstern / Oceanien -->
+        <item>Israel</item>
+        <item>Saudiarabien</item>
+        <item>Förenade Arabemiraten</item>
+        <item>Qatar</item>
+        <item>Jordanien</item>
+        <item>Libanon</item>
+        <item>Iran</item>
+        <item>Irak</item>
+        <item>Australien</item>
+        <item>Nya Zeeland</item>
+    </string-array>
+
+
+</resources>
