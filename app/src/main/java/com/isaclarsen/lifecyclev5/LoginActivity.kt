@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         if (getSharedPreferences("auth", MODE_PRIVATE).getBoolean("autoLogin", false)) {
-            startActivity(Intent(this, ProfileActivity::class.java))
+            startActivity(Intent(this, DashboardActivity::class.java))
             finish()
             return
         }
@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
                 getSharedPreferences("auth", MODE_PRIVATE)
                     .edit { putBoolean("autoLogin", true) }
                 //Ändra activity här
-                val intent = Intent(this, ProfileActivity::class.java)
+                val intent = Intent(this, DashboardActivity::class.java)
                 startActivity(intent);
             } else {
                 loginStatusText.setText("Fel användarnamn eller lösenord")

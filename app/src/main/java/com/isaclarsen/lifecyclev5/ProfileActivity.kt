@@ -8,7 +8,6 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.Switch
@@ -58,7 +57,7 @@ class ProfileActivity : AppCompatActivity() {
 
         submitInfoButton.setOnClickListener {
             email = emailInput.getText().toString();
-            age = ageInput.text.toString().toInt();
+            age = ageInput.text.toString().toIntOrNull() ?: 0;
             country = countrySpinner.selectedItem.toString();
 
             if (licenseCheckBox.isChecked) {
@@ -80,9 +79,9 @@ class ProfileActivity : AppCompatActivity() {
             }
 
             saveProfile()
-            showSavedProfileDialog()
-
             Toast.makeText(baseContext, "Profil sparad", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this, DashboardActivity::class.java));
+
             Log.i(
                 "Login",
                 "Email: $email\n Age: $age\n Country: $country\n Gender: $gender\n License: $hasLicense\n Notifications: $notifications"
@@ -125,7 +124,7 @@ class ProfileActivity : AppCompatActivity() {
             .apply()
     }
 
-    private fun showSavedProfileDialog() {
+    fun showSavedProfileDialog() {
         val p = prefs;
         val msg = """
                 E-post: ${p.getString("email", "")}
@@ -177,12 +176,12 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         R.id.menu_logout -> {
-            getSharedPreferences("auth", MODE_PRIVATE).edit {
-                putBoolean("autoLogin", false)
+            getSharedPreferences("auth", MODE_PRIVATE).edit { putBoolean("autoLogin", false) }
+            val intent = Intent(this, LoginActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             }
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-            startActivity(Intent(this, LoginActivity::class.java)); finish(); true
+            startActivity(intent)
+            true
         }
 
         else -> super.onOptionsItemSelected(item)
